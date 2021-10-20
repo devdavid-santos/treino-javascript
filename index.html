@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto Aguia</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Boxicons CDN link --> 
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bx-run'></i>
+                <div class="logo_name">Águia</div>
+            </div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="#">
+                    <i class='bx bx-search-alt-2' ></i>
+                    <input type="text" placeholder="Pesquisa...">
+                </a>
+                <span class="tooltip">Pesquisa</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Usuário</span>
+                </a>
+                <span class="tooltip">Usuário</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-chat' ></i>
+                    <span class="links_name">Mensagem</span>
+                </a>
+                <span class="tooltip">Mensagem</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <span class="links_name">Analise</span>
+                </a>
+                <span class="tooltip">Analise</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-folder' ></i>
+                    <span class="links_name">Planilha</span>
+                </a>
+                <span class="tooltip">Planilha</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cart-alt' ></i>
+                    <span class="links_name">Carrinho</span>
+                </a>
+                <span class="tooltip">Carrinho</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-heart' ></i>
+                    <span class="links_name">Feedback</span>
+                </a>
+                <span class="tooltip">Feedback</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <span class="links_name">Configuração</span>
+                </a>
+                <span class="tooltip">Configurações</span>
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="./img/42058829_1972496582796680_2888376574690721792_n.jpg" alt="">
+                    <div class="name_job">
+                     <div class="name">David De Oliveria</div>
+                     <div class="job">Web Designer</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out" ></i>
+            </div>
+        </div>
+    </div>
+    </header>
+    <section class="hidden">
+    <div class="slider-content">
+   <div class="slider">
+       <div class="slides">
+           <input type="radio" name="radio-btn" id="radio1">
+           <input type="radio" name="radio-btn" id="radio2">
+           <input type="radio" name="radio-btn" id="radio3">
+           <input type="radio" name="radio-btn" id="radio4">
+           <div class="slide first">
+               <img src="./img/2.jpg" alt="" class="slide-modifier">
+           </div>
+           <div class="slide">
+               <img src="./img/3.jpg" alt="" class="slide-modifier2">
+           </div>
+           <div class="slide">
+               <img src="./img/section 1 1 (1).png" alt="" class="slide-modifier3" >
+           </div>
+           <div class="slide">
+               <img src="./img/banner-aguia1.jpg" alt="">
+           </div>
+           <div class="navigation-auto">
+               <div class="auto-btn1"></div>
+               <div class="auto-btn2"></div>
+               <div class="auto-btn3"></div>
+               <div class="auto-btn4"></div>
+           </div>
+       </div>
+       <div class="navigation-manual">
+           <label for="radio1" class="manual-btn"></label>
+           <label for="radio2" class="manual-btn"></label>
+           <label for="radio3" class="manual-btn"></label>
+           <label for="radio4" class="manual-btn"></label>
+       </div>
+    </div>
+   </div>
+</section>
+   <section>
+       <div>
+           <h2>Outra section</h2>
+           <img src="./img/42058829_1972496582796680_2888376574690721792_n.jpg" alt="">
+       </div>
+   </section>
+
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search-alt-2");
+
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");     
+        }
+        searchBtn.onclick = function() {
+            sidebar.classList.toggle("active");     
+        }
+
+
+   </script>
+   <script type="text/javascript">
+       var counter = 1;
+       setInterval(function(){
+           document.getElementById('radio' + counter).checked = true;
+           counter++;
+           if(counter > 4){
+               counter = 1;
+           }
+       }, 5000);
+   </script>
+</body>
+</html>
